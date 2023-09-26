@@ -95,4 +95,30 @@ class KeyRows {
     '.',
     SpecialKey.enter.name,
   ];
+
+  static final List<String> numericRow = [
+    '1',
+    '2',
+    '3',
+    SpecialKey.backspace.name,
+    '4',
+    '5',
+    '6',
+    '-',
+    '7',
+    '8',
+    '9',
+    ',',
+    '*',
+    '0',
+    '.',
+    SpecialKey.enter.name,
+  ];
+
+  static final List<String> numericSpecialCases = [
+    '-',
+    ',',
+    '*',
+    '.',
+  ];
 }

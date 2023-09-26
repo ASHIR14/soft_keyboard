@@ -6,7 +6,8 @@ A customizable soft keyboard to use instead of the built in non-customizable key
 
 (This package is still in development)
 
-![Alphanumeric Keyboard 1](screenshots/alphanumeric1.png) ![Alphanumeric Keyboard 1](screenshots/alphanumeric2.png)
+![Alphanumeric Keyboard 1](screenshots/alphanumeric1.png) ![Alphanumeric Keyboard 1](screenshots/alphanumeric2.png)  
+![Numeric Keyboard](screenshots/numeric.png)
 
 ## Features
 
@@ -15,33 +16,49 @@ A customizable soft keyboard to use instead of the built in non-customizable key
 - Provide IconData for action keys
 - Style the keyboard text as per your preference
 - Adjust the keyboard height
+- Choose between Alphanumeric or Numeric keyboard
 
 ## Getting started
 
 In your flutter project add the dependency:
 
-```yaml
-dependencies:
-  soft_keyboard: any
-```
+```yaml  
+dependencies:  
+ soft_keyboard: any  
+```  
 
 Import the package:
 
-```dart
-import 'package:soft_keyboard/soft_keyboard.dart';
-```
+```dart  
+import 'package:soft_keyboard/soft_keyboard.dart';  
+```  
 
 ## Usage
 
-```dart
-AlphanumericKeyboard(  
+```dart  
+AlphanumericKeyboard(    
+  controller: _controller,
+  onEnterTapped: () {  
+	log("hide keyboard");  
+  }, 
+  height: 260,    
+  backgroundColor: Colors.black,    
+  actionKeyColor: Colors.blueGrey,    
+  alphanumericKeyColor: Colors.indigo,    
+  backspaceKeyIcon: Icons.backspace,
+  enterKeyIcon: Icons.keyboard_return,
+),
+```
+```dart  
+NumericKeyboard(  
   controller: _controller,  
-  height: 260,  
+  onEnterTapped: () {  
+    log("hide keyboard");  
+  },  
   backgroundColor: Colors.black,  
   actionKeyColor: Colors.blueGrey,  
-  alphanumericKeyColor: Colors.indigo,  
   backspaceKeyIcon: Icons.backspace,  
   enterKeyIcon: Icons.keyboard_return,  
 ),
-```
+```  
 Check the example project for a full example

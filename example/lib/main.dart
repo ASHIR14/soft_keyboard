@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:soft_keyboard/soft_keyboard.dart';
 
@@ -47,10 +49,23 @@ class _MainScreenState extends State<MainScreen> {
           ),
           AlphanumericKeyboard(
             controller: _controller,
+            onEnterTapped: () {
+              log("hide keyboard");
+            },
             height: 260,
             backgroundColor: Colors.black,
             actionKeyColor: Colors.blueGrey,
             alphanumericKeyColor: Colors.indigo,
+            backspaceKeyIcon: Icons.backspace,
+            enterKeyIcon: Icons.keyboard_return,
+          ),
+          NumericKeyboard(
+            controller: _controller,
+            onEnterTapped: () {
+              log("hide keyboard");
+            },
+            backgroundColor: Colors.black,
+            actionKeyColor: Colors.blueGrey,
             backspaceKeyIcon: Icons.backspace,
             enterKeyIcon: Icons.keyboard_return,
           ),

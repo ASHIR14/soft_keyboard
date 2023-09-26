@@ -45,7 +45,15 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
           ),
-          AlphanumericKeyboard(controller: _controller),
+          AlphanumericKeyboard(
+            controller: _controller,
+            height: 260,
+            backgroundColor: Colors.black,
+            actionKeyColor: Colors.blueGrey,
+            alphanumericKeyColor: Colors.indigo,
+            backspaceKeyIcon: Icons.backspace,
+            enterKeyIcon: Icons.keyboard_return,
+          ),
         ],
       ),
     );

@@ -2,6 +2,9 @@ name: soft_keyboard
 description: A customisable soft keyboard package.
 version: 0.1.0
 
+homepage: https://github.com/ASHIR14/soft_keyboard
+repository: https://github.com/ASHIR14/soft_keyboard
+
 environment:
   sdk: '>=3.1.0 <4.0.0'
   flutter: ">=1.17.0"

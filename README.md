@@ -1,39 +1,47 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Soft Keyboard
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![license](https://img.shields.io/github/license/Ashir14/widget_switcher)](https://github.com/Ashir14/soft_keyboard/blob/master/LICENSE)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+A customizable soft keyboard to use instead of the built in non-customizable keyboard of any phone.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+(This package is still in development)
+
+![Alphanumeric Keyboard 1](alphanumeric1.png) ![Alphanumeric Keyboard 1](alphanumeric2.png)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Customize the background color
+- Choose colors of the keys
+- Provide IconData for action keys
+- Style the keyboard text as per your preference
+- Adjust the keyboard height
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In your flutter project add the dependency:
+
+```yaml
+dependencies:
+  soft_keyboard: any
+```
+
+Import the package:
+
+```dart
+import 'package:soft_keyboard/soft_keyboard.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+AlphanumericKeyboard(  
+  controller: _controller,  
+  height: 260,  
+  backgroundColor: Colors.black,  
+  actionKeyColor: Colors.blueGrey,  
+  alphanumericKeyColor: Colors.indigo,  
+  backspaceKeyIcon: Icons.backspace,  
+  enterKeyIcon: Icons.keyboard_return,  
+),
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Check the example project for a full example

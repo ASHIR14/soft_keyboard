@@ -6,6 +6,7 @@ import '../utils/key_rows.dart';
 class AlphanumericKeyboard extends StatefulWidget {
   const AlphanumericKeyboard(
       {required this.controller,
+      this.height = 260,
       this.backgroundColor = const Color(0xff0a0a0a),
       this.actionKeyColor = const Color(0xff171717),
       this.alphanumericKeyColor = const Color(0xff2d2d2d),
@@ -22,6 +23,7 @@ class AlphanumericKeyboard extends StatefulWidget {
       this.firstLetterCapitalizationColor,
       super.key});
 
+  final double height;
   final TextEditingController controller;
   final Color backgroundColor;
   final Color actionKeyColor;
@@ -232,7 +234,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 260,
+      height: widget.height,
       color: widget.backgroundColor,
       padding: const EdgeInsets.all(10),
       child: Column(

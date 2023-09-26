@@ -6,7 +6,7 @@ A customizable soft keyboard to use instead of the built in non-customizable key
 
 (This package is still in development)
 
-![Alphanumeric Keyboard 1](alphanumeric1.png) ![Alphanumeric Keyboard 1](alphanumeric2.png)
+![Alphanumeric Keyboard 1](screenshots/alphanumeric1.png) ![Alphanumeric Keyboard 1](screenshots/alphanumeric2.png)
 
 ## Features
 

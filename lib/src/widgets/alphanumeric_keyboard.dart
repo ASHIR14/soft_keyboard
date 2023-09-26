@@ -23,21 +23,52 @@ class AlphanumericKeyboard extends StatefulWidget {
       this.firstLetterCapitalizationColor,
       super.key});
 
+  /// The height of the keyboard
   final double height;
+
+  /// The controller for the text field
   final TextEditingController controller;
+
+  /// The color for the keyboard background
   final Color backgroundColor;
+
+  /// The color for the action keys
   final Color actionKeyColor;
+
+  /// The color for the alphanumeric keys
   final Color alphanumericKeyColor;
+
+  /// Whether to show the space key icon or not, default is false
   final bool showSpaceKeyIcon;
+
+  /// The text style for the numeric keys
   final TextStyle? numericKeyTextStyle;
+
+  /// The text style for the alphabets and symbols keys
   final TextStyle? alphaNumericKeyTextStyle;
+
+  /// The icon to show on space key
   final IconData? spaceKeyIcon;
+
+  /// The icon to show on enter key
   final IconData? enterKeyIcon;
+
+  /// The icon to show on backspace key
   final IconData? backspaceKeyIcon;
+
+  /// The icon to show when alphabets tab is opened
   final IconData? symbolsKeyIcon;
+
+  /// The icon to show when symbols tab is opened
   final IconData? alphabetKeyIcon;
+
+  /// The icon to show when all caps is enabled
   final IconData? capsLockKeyIcon;
+
+  /// The icon to show when all caps is disabled [lowerCase, onlyFirstLetter]
   final IconData? capsUnlockKeyIcon;
+
+  /// The icon color when firstLetterCapitalization is enabled
   final Color? firstLetterCapitalizationColor;
 
   @override
@@ -49,6 +80,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
 
   KeyBoardType keyboardType = KeyBoardType.alphanumeric;
 
+  // Renders the keyboard rows
   Widget keyboardRow(List<String> keys) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -67,6 +99,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
     );
   }
 
+  // Renders the number keys
   Widget numberKey(String kKey) {
     return InkWell(
       onTap: () {
@@ -98,6 +131,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
     );
   }
 
+  // Renders the alphabet keys
   Widget alphabetKey(String kKey) {
     return InkWell(
       onTap: () {
@@ -138,6 +172,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
     );
   }
 
+  // Returns the icon for the action keys
   Widget? getActionKeyIcon(SpecialKey key) {
     IconData iconData;
     Color iconColor = Colors.white;
@@ -173,6 +208,7 @@ class _AlphanumericKeyboardState extends State<AlphanumericKeyboard> {
     );
   }
 
+  // Renders the action keys
   Widget actionKey(SpecialKey kKey) {
     return InkWell(
       onTap: () {
